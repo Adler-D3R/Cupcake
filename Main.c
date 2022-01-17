@@ -1,5 +1,7 @@
 //Cupcake Header
 #include "Headers/Main.h"
+#include "Headers/SYSInfo.h"
+#include "Headers/CPUInfo.h"
 
 //Color Defines
 #define KNRM  "\x1B[0m"
@@ -59,6 +61,6 @@ int main(int argc, char *argv[])
 
 	free(ptr_i); //We Don't Need "i" Anymore. Let's Free It So That We Free RAM (Pure Optimization)
 
-	//MainMenu();
+	MainMenu();
 	return 0;
 }

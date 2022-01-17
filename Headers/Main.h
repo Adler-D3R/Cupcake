@@ -9,7 +9,7 @@
 #include <sys/ioctl.h>
 
 //Main Defines
-#define DCFA_VERSION "1.0"
+#define CUPCAKE_VERSION "1.0"
 
 //Color Defines
 #define KNRM  "\x1B[0m"
@@ -23,6 +23,9 @@
 #define KWHT  "\x1B[37m"
 #define KBLK  "\x1B[30m"
 
+void SYSInfoRequest();
+void CPUInfoRequest();
+
 void Logo()
 {
 	printf("\n");
@@ -35,7 +38,7 @@ void Logo()
 	printf("\n");
 
         printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", KPNK);
-        printf("%s                    Cupcake - Version V %s                  \n", KWHT, DCFA_VERSION);
+        printf("%s                    Cupcake - Version %s                   \n", KWHT, CUPCAKE_VERSION);
         printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n \n", KPNK);
 }
 
@@ -58,8 +61,43 @@ void ReducedLogo()
 	printf("\n");
 
         printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━\n", KPNK);
-        printf("%s  Cupcake - Version V %s \n", KWHT, DCFA_VERSION);
+        printf("%s   Cupcake - Version %s  \n", KWHT, CUPCAKE_VERSION);
         printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━\n \n", KPNK);
+}
+
+void MainMenu()
+{
+	//Alocate Memory To Get Module Number Right After
+	char ptr_mod[3];
+
+	//Prints The Main Menu
+	printf(" %s0. %sQuit \n", KPNK, KWHT);
+	printf(" %s1. %sGet System Informations \n", KPNK, KWHT);
+	printf(" %s2. %sGet CPU Informations \n", KPNK, KWHT);
+	printf(" %s3. %sGet Network Informations \n", KPNK, KWHT);
+	printf("\n");
+
+	//Scan For The User Choice
+	printf(" >> ");
+	scanf("%2s", ptr_mod); //Blocks Buffer To 2 And Stores Result In ptr_mod Value (The One It Points To)
+	printf("\n");
+
+	//Let's Check Results So We Know What To Do
+	if(strcmp(ptr_mod, "0") == 0 || strcmp(ptr_mod, "00") == 0)
+	{
+		printf(" Exiting...");
+	}
+	else if(strcmp(ptr_mod, "1") == 0 || strcmp(ptr_mod, "01") == 0)
+        {
+                SYSInfoRequest();
+        }
+	else if(strcmp(ptr_mod, "2") == 0 || strcmp(ptr_mod, "02") == 0)
+        {
+                CPUInfoRequest();
+        }
+
+	MainMenu();
+
 }
 
 #endif

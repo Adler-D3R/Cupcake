@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	int* ptr_i = NULL; //Initialize Pointer Of Integer "i"
 	ptr_i = malloc(sizeof(ptr_i)); //Set Pointer Value To Provided Memory Adress
 
-	//Check If It Received Adress Properly
+	//Check If It Has Received Adress Properly
 	if(ptr_i == NULL)
 	{
 		printf("%s [FATAL] Error While Allocating Adress To ptr_i ! \n Exiting Now...", KRED); //ptr_i Didn't Receive The Adress ! We Must Exit Before We Damage The Computer (Not Enough RAM)
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 	//Args Analyser - Gets All Provided Args
 	for (int i = 0; i < argc; i++)
 	{
-		if(strcmp(argv[i], "--version") == 0 || strcmp(argv[i], "-v") == 0)
+		if(strcmp(argv[i], "--version") == 0 || strcmp(argv[i], "-v") == 0) //strcmp() Compares Two Strings And Returns 0 If Equals
                 {
                         printf(" %s[%sINFO%s] Printing Version ... \n", KWHT, KBLU, KWHT);
                 }

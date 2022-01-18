@@ -23,6 +23,7 @@
 #define KWHT  "\x1B[37m"
 #define KBLK  "\x1B[30m"
 
+//Preparing Voids We're Going To Use Next
 void SYSInfoRequest();
 void CPUInfoRequest();
 
@@ -85,23 +86,24 @@ void MainMenu()
 	//Let's Check Results So We Know What To Do
 	if(strcmp(ptr_mod, "0") == 0 || strcmp(ptr_mod, "00") == 0)
 	{
-		printf(" Exiting...");
+		printf(" Exiting..."); //We Tell User We Exit
+		exit(0); //We're Exiting Cupcake
 	}
 	else if(strcmp(ptr_mod, "1") == 0 || strcmp(ptr_mod, "01") == 0)
         {
-                SYSInfoRequest();
+                SYSInfoRequest(); //We Call SysINFO Which Is Going To Check Terminal Size And Call The Appropriate Function
         }
 	else if(strcmp(ptr_mod, "2") == 0 || strcmp(ptr_mod, "02") == 0)
         {
-                CPUInfoRequest();
+                CPUInfoRequest(); //Same Here For CPUInfo
         }
 	else if(strcmp(ptr_mod, "99") == 0)
 	{
-		printf(" Printing Help... \n\n");
+		printf(" CUPCAKE HELP : \n\n"); //Help Page
+		printf("%s - '%s--help%s' : Prints Help Page. \n", KWHT, KPNK, KWHT);
 	}
 
 	MainMenu();
-
 }
 
 #endif

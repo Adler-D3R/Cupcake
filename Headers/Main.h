@@ -74,7 +74,7 @@ void MainMenu()
 	printf(" %s0. %sQuit \n", KPNK, KWHT);
 	printf(" %s1. %sGet System Informations \n", KPNK, KWHT);
 	printf(" %s2. %sGet CPU Informations \n", KPNK, KWHT);
-	printf(" %s3. %sGet Network Informations \n", KPNK, KWHT);
+	printf(" %s99. %sGet Help \n", KPNK, KWHT);
 	printf("\n");
 
 	//Scan For The User Choice
@@ -95,6 +95,10 @@ void MainMenu()
         {
                 CPUInfoRequest();
         }
+	else if(strcmp(ptr_mod, "99") == 0)
+	{
+		printf(" Printing Help... \n\n");
+	}
 
 	MainMenu();
 

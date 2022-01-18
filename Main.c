@@ -61,6 +61,6 @@ int main(int argc, char *argv[])
 
 	free(ptr_i); //We Don't Need "i" Anymore. Let's Free It So That We Free RAM (Pure Optimization)
 
-	MainMenu();
+	MainMenu(); //We Call Main Menu Fubction Defined In Main.h
 	return 0;
 }

@@ -26,6 +26,7 @@
 //Preparing Voids We're Going To Use Next
 void SYSInfoRequest();
 void CPUInfoRequest();
+void StartThreads();
 
 void Logo()
 {
@@ -75,6 +76,7 @@ void MainMenu()
 	printf(" %s0. %sQuit \n", KPNK, KWHT);
 	printf(" %s1. %sGet System Informations \n", KPNK, KWHT);
 	printf(" %s2. %sGet CPU Informations \n", KPNK, KWHT);
+	printf(" %s3. %sThreading Test \n", KPNK, KWHT);
 	printf(" %s99. %sGet Help \n", KPNK, KWHT);
 	printf("\n");
 
@@ -86,7 +88,7 @@ void MainMenu()
 	//Let's Check Results So We Know What To Do
 	if(strcmp(ptr_mod, "0") == 0 || strcmp(ptr_mod, "00") == 0)
 	{
-		printf(" Exiting..."); //We Tell User We Exit
+		printf(" Exiting... \n\n"); //We Tell User We Exit
 		exit(0); //We're Exiting Cupcake
 	}
 	else if(strcmp(ptr_mod, "1") == 0 || strcmp(ptr_mod, "01") == 0)
@@ -96,6 +98,10 @@ void MainMenu()
 	else if(strcmp(ptr_mod, "2") == 0 || strcmp(ptr_mod, "02") == 0)
         {
                 CPUInfoRequest(); //Same Here For CPUInfo
+        }
+	else if(strcmp(ptr_mod, "3") == 0 || strcmp(ptr_mod, "03") == 0)
+        {
+                StartThreads(); //Call M-Threading Starter
         }
 	else if(strcmp(ptr_mod, "99") == 0)
 	{

@@ -2,6 +2,7 @@
 #include "Headers/Main.h"
 #include "Headers/SYSInfo.h"
 #include "Headers/CPUInfo.h"
+#include "Headers/M-Threading.h"
 
 //Color Defines
 #define KNRM  "\x1B[0m"

@@ -27,6 +27,7 @@
 void SYSInfoRequest();
 void CPUInfoRequest();
 void StartThreads();
+int NestedStructures();
 
 void Logo()
 {
@@ -77,6 +78,7 @@ void MainMenu()
 	printf(" %s1. %sGet System Informations \n", KPNK, KWHT);
 	printf(" %s2. %sGet CPU Informations \n", KPNK, KWHT);
 	printf(" %s3. %sThreading Test \n", KPNK, KWHT);
+	printf(" %s4. %sNested Structures Example \n", KPNK, KWHT);
 	printf(" %s99. %sGet Help \n", KPNK, KWHT);
 	printf("\n");
 
@@ -102,6 +104,10 @@ void MainMenu()
 	else if(strcmp(ptr_mod, "3") == 0 || strcmp(ptr_mod, "03") == 0)
         {
                 StartThreads(); //Call M-Threading Starter
+        }
+        else if(strcmp(ptr_mod, "4") == 0 || strcmp(ptr_mod, "04") == 0)
+        {
+                NestedStructures(); //Call Nested Structure Module Start Function
         }
 	else if(strcmp(ptr_mod, "99") == 0)
 	{

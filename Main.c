@@ -3,6 +3,7 @@
 #include "Headers/SYSInfo.h"
 #include "Headers/CPUInfo.h"
 #include "Headers/M-Threading.h"
+#include "Headers/NS.h"
 
 //Color Defines
 #define KNRM  "\x1B[0m"
@@ -39,6 +40,7 @@ int main(int argc, char *argv[])
 	//Check If It Has Received Adress Properly
 	if(ptr_i == NULL)
 	{
+		free(ptr_i); //We Free The Variable
 		printf("%s [FATAL] Error While Allocating Adress To ptr_i ! \n Exiting Now...", KRED); //ptr_i Didn't Receive The Adress ! We Must Exit Before We Damage The Computer (Not Enough RAM)
 		exit(0); //Exit Program
 	}

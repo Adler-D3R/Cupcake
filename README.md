@@ -1,7 +1,5 @@
 # Cupcake Base 🧁
 
-**Join Discord for support : https://discord.gg/G7GvFvP4qH 🔊**
-
 ### 1. Overview and Features ⚙️
 ---
 

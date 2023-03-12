@@ -1,5 +1,9 @@
 # Cupcake Base 🧁
 
+![](https://img.shields.io/badge/Version-1.0-purple?style=for-the-badge&color=c907f5&labelColor=292929)
+![](https://img.shields.io/badge/Platform-Linux-purple?style=for-the-badge&color=c907f5&labelColor=292929)
+![](https://img.shields.io/badge/Language-C-purple?style=for-the-badge&color=c907f5&labelColor=292929)
+
 ### 1. Overview and Features ⚙️
 ---
 
